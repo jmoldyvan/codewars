@@ -11,11 +11,8 @@ function getFirstPython(list) {
     let firstPyGuy = (element) => element.language === 'Python';
     let num = list.findIndex(firstPyGuy)
     let firstPy = list[num];
-    console.log(firstPy);
     return `${firstPy.firstName}, ${firstPy.country}`
     }
-
-
     else{
         return 'There will be no Python developers'
     }
