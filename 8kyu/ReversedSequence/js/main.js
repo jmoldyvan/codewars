@@ -4,4 +4,4 @@ const reverseSeq = n => {
         zzz.push(i)
     }
     return zzz.reverse();
-  };
+  }
