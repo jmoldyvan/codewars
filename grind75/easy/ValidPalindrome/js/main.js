@@ -3,10 +3,7 @@ var isPalindrome = function(s) {
     console.log(s);
     s = s.toLowerCase()
     console.log(s);
-    f = s.split('').reverse().join('')
-    s = s.split('').join('')
-
-console.log(f);
+    s = s.split(' ').join('')
 console.log(s);
-    return s.split('').join('') == s.split('').reverse().join('') ? true : false
+    return s == s.split('').reverse().join('') ? true : false
 };
