@@ -27,5 +27,6 @@ for( let i = 0; i<input.length; i++){
         num = ''
     }
     
+    
 }
 return stack.reduce((cur, sum) => cur + sum)
