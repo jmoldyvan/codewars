@@ -23,3 +23,7 @@ function wave(str){
   }
 
   wave('code wars')
+
+  array.forEach(element => {
+    
+  });
