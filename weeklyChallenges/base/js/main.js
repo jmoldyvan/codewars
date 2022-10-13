@@ -74,18 +74,12 @@ bigRevers(" .dne eht ta ecapsetihw eht hctam t'nseod gnirts siht fo gninnigeb eh
 function decodeSub(subs){
 
     let decodeArr = subs.split(',')
-    console.log(decodeArr);
     let decodeArrNoWhite = decodeArr.filter((x) => x.length == x.trim().length)
     let decodeArrNoWoof = decodeArrNoWhite.filter((x) => !x.includes('Dog') &&  !x.includes('dog') && !x.includes('Bone') && !x.includes('bone') && !x.includes('Bark') && !x.includes('bark'))
-    console.log(decodeArrNoWoof);
     let no5 = decodeArrNoWoof.filter((x) => x.length % 5 !== 0)
-    console.log(no5);
     let oddSumNo = no5.filter((x) => (x.charCodeAt([0]) + x.charCodeAt([x.length-1])) % 2 !==0 )
-    console.log(oddSumNo);
     let noMidE = oddSumNo.filter((x) => x.length % 2 == 0 ? x[(x.length/2)] !== 'e' : x[(Math.floor(x.length/2))+1] !== 'e')
-    console.log(noMidE);
     let noS = noMidE.filter((x) => !x.includes('S'))
-    console.log(noS);
     let noEvenLower=[]
     for (let i = 0; i < noS.length; i++) {
         const element = noS[i];
