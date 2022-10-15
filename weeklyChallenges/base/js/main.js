@@ -1,30 +1,30 @@
-// function isThisLeet(param){
-// let obj ={'0':'O', '5':'S' , '1' : 'I' , '6' : 'G',
-// '2' : 'Z'    ,  '7' : 'L',
-// '3' : 'E' ,    '8' : 'B',
-// '4' : 'h'    ,  '9' : 'q'}
+function isThisLeet(param){
+let obj ={'0':'O', '5':'S' , '1' : 'I' , '6' : 'G',
+'2' : 'Z'    ,  '7' : 'L',
+'3' : 'E' ,    '8' : 'B',
+'4' : 'h'    ,  '9' : 'q'}
 
-// let obj2={
-//     'O':'0', 'S':'5' , 'I' : '1' , 'G' : '6',
-// 'Z' : '2'    ,  'L' : '7',
-// 'E' : '3' ,    'B' : '8',
-// 'h' : '4'    ,  'q' : '9'
-// }
+let obj2={
+    'O':'0', 'S':'5' , 'I' : '1' , 'G' : '6',
+'Z' : '2'    ,  'L' : '7',
+'E' : '3' ,    'B' : '8',
+'h' : '4'    ,  'q' : '9'
+}
 
-// let arr = param.split('')
+let arr = param.split('')
 
-// for(let i = 0; i < arr.length; i++){
-//     if(obj[arr[i]]){
-//         arr[i] = obj[arr[i]]
-//     }
-//     else if(obj2[arr[i]]){
-//         arr[i] = obj2[arr[i]]
-//     }
-// }
-// console.log(arr.join(''));
-// }
+for(let i = 0; i < arr.length; i++){
+    if(obj[arr[i]]){
+        arr[i] = obj[arr[i]]
+    }
+    else if(obj2[arr[i]]){
+        arr[i] = obj2[arr[i]]
+    }
+}
+console.log(arr.join(''));
+}
 
-// isThisLeet("PR0-T1P #hqB: 1T'5 N1C3 T0 5AY H3770." )
+isThisLeet("PR0-T1P #hqB: 1T'5 N1C3 T0 5AY H3770." )
 
 function cleanIt(str){
 
@@ -74,18 +74,17 @@ bigRevers(" .dne eht ta ecapsetihw eht hctam t'nseod gnirts siht fo gninnigeb eh
 function decodeSub(subs){
 
     let decodeArr = subs.split(',')
-    console.log(decodeArr);
     let decodeArrNoWhite = decodeArr.filter((x) => x.length == x.trim().length)
     let decodeArrNoWoof = decodeArrNoWhite.filter((x) => !x.includes('Dog') &&  !x.includes('dog') && !x.includes('Bone') && !x.includes('bone') && !x.includes('Bark') && !x.includes('bark'))
-    console.log(decodeArrNoWoof);
+    // console.log(decodeArrNoWoof);
     let no5 = decodeArrNoWoof.filter((x) => x.length % 5 !== 0)
-    console.log(no5);
+    // console.log(no5);
     let oddSumNo = no5.filter((x) => (x.charCodeAt([0]) + x.charCodeAt([x.length-1])) % 2 !==0 )
-    console.log(oddSumNo);
+    // console.log(oddSumNo);
     let noMidE = oddSumNo.filter((x) => x.length % 2 == 0 ? x[(x.length/2)] !== 'e' : x[(Math.floor(x.length/2))+1] !== 'e')
-    console.log(noMidE);
+    // console.log(noMidE);
     let noS = noMidE.filter((x) => !x.includes('S'))
-    console.log(noS);
+    // console.log(noS);
     let noEvenLower=[]
     for (let i = 0; i < noS.length; i++) {
         const element = noS[i];
@@ -98,3 +97,62 @@ function decodeSub(subs){
 
 decodeSub("The Pawshank Redemption,Caturday Night Live,Only Meworders in the Building,I Love Mewcy, Mewsummer Meowders,The Golden Purrs, Purrlandia ,Meowpardy, Meowstery Science Theater: Purrthousand, Amewican Idol,Dog City,Doctor Mew , The Meowing Fed,Mew Peter,The Vicar of Dogley, Kittens,Meownton Abbey,Pets and the Kitty,Dogis and Bonehead,Pawlty Meowers ,The Meowpet Show,Barkos,The Catbert Purrport,The Pawffice,The Dogford Files, Battlestar Catlactica,Catlumbo,SpongeDog Squarepants,NYPD Mew ,Fluffy the Meowpire Purrer,The Inbemewners,Meowder She Wrote,Paw & Order,30 Dog, Pawvatar: The Last Meowbender,The Pawnight Show,Arrested Dogvelopment,Furiends,Mewie,Curb Your Dogthusiasm,Teenage Mewtant Ninja Turtles,Phineas and Purrb,Paw Trek, Paw Trek: The Next Mewination, Twin Mewks, *C*A*T*S*,DogTales, Game of Bones, House of the Meowgon,The Purrlight Zone,Breaking Bone,The Meowre,The Dogpranos,The Rings of Meower, The KIT Crowd,Strangepaw Things ,Catman: The Animeowted Series,Meowter Call Saul,Mewgerton ,Obark,Mewphoria,La Casa de Pawpel,Rick & Meowty,Amewican Purror Story, Mewcifer,PawndaVision,Dogxter,The Meowndalorian, Dog Lasso,Bark,Meowdern Pawmily , Meowtlander,Bone Mirror,Barks and Recreation,How to Get Away with Meowder,Boneland ,Meowther Ted,Mewtopia,Mewey,The Mewkie Meowse Doghouse,Mewster Rogers' Neighborhood"
 )
+
+
+
+// day6
+
+// Write a function that, when given a non-empty string, and positive integer X, 
+// removes every Xth character from the string. Counting should begin from the 
+// first element in the string and should continue in that pattern until the end of the string.
+
+// For example:
+// // For the string below and 4
+// "Thies its H alltowe!en!? Th#is Tis GHalolowmeen$!"
+// // remove decoy strings
+// "This is Halloween! This is Halloween!"
+
+// // For the string below and 5
+// "The LBachyelor^ is ma tehrrib le tpelev!isioOn sh8ow."
+// // remove decoy strings and preach 🙌
+// "The Bachelor is a terrible television show."
+
+function removeKFromString(str,k){
+    str = str.split('')
+   str = str.filter((x,i) => (i+1) % k !== 0)
+   str = str.join('')
+    console.log(str);
+}
+
+removeKFromString("The LBachyelor^ is ma tehrrib le tpelev!isioOn sh8ow."
+,5)
+
+
+// day7
+
+function flipAlphabet(str){
+
+    let obj = {
+        'a':'z','b':'y', 'c':'x', 'd':'w', 'e':'v','f':'u','g':'t','h':'s',"i":'r',"j":'q','k':'p','l':'o','m':'n',
+        'n':'m','o':'l', 'p':'k', 'q':'j', 'r':'i','s':'h','t':'g','u':'f',"v":'e',"w":'d','x':'c','y':'b','z':'a',
+    }
+    let arr = str.split('')
+    console.log(arr);
+    for(let i = 0; i < arr.length; i++){
+        if(obj[arr[i]]){
+            arr[i] = obj[arr[i]]
+        }
+    }
+    str = arr.join('')
+    let newStr = str.split("").map(c => (c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase())).join("");
+    arr = newStr.split('')
+    for(let i = 0; i < arr.length; i++){
+        if(obj[arr[i]]){
+            arr[i] = obj[arr[i]]
+        }
+    }
+    newStr = arr.join('')
+    console.log(newStr);
+}
+
+flipAlphabet('avCZNKOV: 0 MFNYVI LI KFMXGFZGRLM XSZMTVH')
