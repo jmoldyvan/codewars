@@ -51,7 +51,38 @@ function moveRight(arr,element){
 
 }
 myArray = ['abc',  1, 2, 'Hey!',89,98,'xyz', 'carbs', 'special']
-console.log(moveLeft(myArray, 'xyz'))
-console.log(moveLeft(myArray, 'xyz'))
-console.log(moveRight(myArray, 'special'))
-console.log(moveRight(myArray, 2))
+// console.log(moveLeft(myArray, 'xyz'))
+// console.log(moveLeft(myArray, 'xyz'))
+// console.log(moveRight(myArray, 'special'))
+// console.log(moveRight(myArray, 2))
+
+// day3
+
+// give me array, sort with strings containing a on left, and then more than 3 characters to the right
+// always a strings? alway 3 char words? always striongs? empty array?
+
+// lets return the array sorted
+
+function aSortThen3(arr){
+
+let Aarr = arr.filter((x) => x.includes('a') || x.includes('A'))
+let LongerThan3arr = arr.filter((x) => x.length>3)
+arr = arr.filter((x) => x.length<=3 && !x.includes('a'))
+
+console.log( Aarr.concat(arr).concat(LongerThan3arr))
+}
+myArr = ['hi', 'hello', 'howdy', 'hola', 'hej', 'hallo', 'heyyy']
+    // ['hola', 'hallo', 'hi', 'hej', 'hello', 'howdy', 'heyyy']
+console.log(aSortThen3(myArr))
+
+
+// day 4
+
+function goUp(element, arr) {
+    arr.forEach(e => {
+        
+    });
+}
+function goDown(element, arr) {
+    
+}
