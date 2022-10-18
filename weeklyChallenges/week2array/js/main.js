@@ -73,16 +73,47 @@ console.log( Aarr.concat(arr).concat(LongerThan3arr))
 }
 myArr = ['hi', 'hello', 'howdy', 'hola', 'hej', 'hallo', 'heyyy']
     // ['hola', 'hallo', 'hi', 'hej', 'hello', 'howdy', 'heyyy']
-console.log(aSortThen3(myArr))
+// console.log(aSortThen3(myArr))
 
 
 // day 4
 
 function goUp(element, arr) {
-    arr.forEach(e => {
-        
-    });
+    let indexOfElement = 0
+    let dimension = 0
+    for (let i = 0; i < arr.length; i++) {
+        let ind = arr[i].indexOf(element)
+        if(ind!== -1){
+            dimension = i
+            indexOfElement = ind
+        }
+    }
+    if(dimension!==0){
+        let replacementChar = arr[dimension-1][indexOfElement]
+        arr[dimension-1].splice(indexOfElement,1,element)
+        arr[dimension].splice(indexOfElement,1,replacementChar)
+    }
+    console.log(arr);
+    return arr
 }
 function goDown(element, arr) {
-    
+    let indexOfElement = 0
+    let dimension = 0
+    for (let i = 0; i < arr.length; i++) {
+        let ind = arr[i].indexOf(element)
+        if(ind!== -1){
+            dimension = i
+            indexOfElement = ind
+        }
+    }
+    if(dimension!==arr.length-1){
+        let replacementChar = arr[dimension+1][indexOfElement]
+        arr[dimension+1].splice(indexOfElement,1,element)
+        arr[dimension].splice(indexOfElement,1,replacementChar)
+    }
+    console.log(arr);
+    return arr
 }
+
+myGrid = [['a', 'h', 'c'], ['d', 'b', 'f'], ['g', 'e', 'i']]
+goDown('h',myGrid)
