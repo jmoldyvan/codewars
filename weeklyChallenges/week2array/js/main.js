@@ -117,3 +117,23 @@ function goDown(element, arr) {
 
 myGrid = [['a', 'h', 'c'], ['d', 'b', 'f'], ['g', 'e', 'i']]
 goDown('h',myGrid)
+
+
+// day5
+function Shuffle(arguments) {
+    for (var k = 0; k < arguments.length; k++) {
+        var i = arguments[k].length;
+        if (i == 0)
+            return false;
+        else {
+            while (--i) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var tempi = arguments[k][i];
+                var tempj = arguments[k][j];
+                arguments[k][i] = tempj;
+                arguments[k][j] = tempi;
+            }
+        }
+    }
+    return arguments
+}
