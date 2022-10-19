@@ -1,10 +1,18 @@
 // array of num, all num, no empty, at least 2 nums && a single num that 2 in the array add up to
 // return array of indexes of the the 2 nums that add to the target
 
-function twoSum(arr,target){
+function twoSum(array,target){
     numI={}
 
-
+for (let i = 0; i < array.length; i++) {
+    diff = target - array[i]
+    if(numI[diff] !== undefined){
+        return [i,numI[diff]]
+    }
+    else{
+        numI[array[i]] = i
+    }
+}
 
 
 }
