@@ -1,18 +1,14 @@
-// taking in 2d array
-// give back number of uniquer arrays formed
+function nthSmallest(arr, pos){
+
+arr = arr.sort((a,b) => a-b)
+
+return arr[pos-1]
+}
 
 
-function solve(arr) {
-
- let newArr = arr.map((x) => [...new Set(x)])
-
-    console.log(newArr.reduce((t,c) => t * c.length, 1));
-    return newArr.reduce((t,c) => t * c.length, 1)
-  };
-
-
-
-solve([[1,2],[4],[5,6]]) //,4
-solve([[1,2],[4,4],[5,6,6]])//,4
-solve([[1,2],[3,4],[5,6]])//,8
-solve([[1,2,3],[3,4,6,6,7],[8,9,10,12,5,6]])//,72
+nthSmallest(                 [3,1,2], 2)//,  2);
+nthSmallest(        [15,20,7,10,4,3], 3)//,  7);
+nthSmallest(          [-5,-1,-6,-18], 4)//, -1);
+nthSmallest([-102,-16,-1,-2,-367,-9], 5)//, -2);
+nthSmallest(      [2,169,13,-5,0,-1], 4)//,  2);
+nthSmallest(           [2,1,3,3,1,2], 3)//,  2);
