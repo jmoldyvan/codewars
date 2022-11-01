@@ -5,4 +5,5 @@ var mergeTwoLists = function(list1, list2) {
         merge.push(list1[i]);
         merge.push(list2[i]);
     }
+    return merge
 };
