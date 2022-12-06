@@ -6,3 +6,13 @@ function pipeFix(numbers) {
   }
   return xxx
 }
+
+// 2023
+
+function pipeFix(numbers){
+  let result = []
+  for(i = numbers[0]; i <= numbers[numbers.length-1]; i++){
+    result.push(i)
+  }
+  return result
+}
