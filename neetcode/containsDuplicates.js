@@ -13,11 +13,8 @@ var containsDuplicate = function(nums) {
            hash[element]=+ 1; 
         }
         else{
-            console.log(false);
-            break
+            return true
         }
-        console.log(hash);
-        
     }
-    console.log(true);
+    return false
 };
