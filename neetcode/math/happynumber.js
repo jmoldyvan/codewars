@@ -18,19 +18,15 @@ var isHappy = function(n) {
     if(n===1){
         return true
     }
-    if(n == 2 || n== 0){
+    else if(n == 2 || n== 0 || n == 4){
         return false
     }
     else{    
-    let digits = []
-    if (n>10){
-        digits.push(n % 10)
-        n = Math.trunc( n / 10)
-    }
-    else{
-        digits = [n]
-    }
-    let squared = digits.map((x) => Number(x) * Number(x))
+    n = [...num+'']
+    console.log(n);
+    let squared = n.map((x) => Number(x) * Number(x))
+    console.log(squared);
     squared = squared.reduce((a,b) => a+b)
+    console.log(squared);
     return isHappy(squared)}
 };
