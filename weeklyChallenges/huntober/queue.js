@@ -5,20 +5,78 @@
 // The size method simply returns the number of items in the queue.
 
 class Queue {
-    // implement your Queue constructor here
-    construstor () {
-        this.list = []
-    }
-  };
+  // implement your Queue constructor here
+  construstor () {
+      this.list = []
+  }
+};
+
+Queue.prototype.enqueue = function(item) {
+  this._queue.push(item);
+};
+
+Queue.prototype.dequeue = function() {
+  return this._queue.shift();
+};
+
+Queue.prototype.size = function() {
+  return this._queue.length;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class Queue {
+//     // implement your Queue constructor here
+//     construstor () {
+//         this.list = []
+//     }
+//   };
   
-  Queue.prototype.enqueue = function(item) {
-    this._queue.push(item);
-  };
+//   Queue.prototype.enqueue = function(item) {
+//     this._queue.push(item);
+//   };
   
-  Queue.prototype.dequeue = function() {
-    return this._queue.shift();
-  };
+//   Queue.prototype.dequeue = function() {
+//     return this._queue.shift();
+//   };
   
-  Queue.prototype.size = function() {
-    return this._queue.length;
-  };
+//   Queue.prototype.size = function() {
+//     return this._queue.length;
+//   };

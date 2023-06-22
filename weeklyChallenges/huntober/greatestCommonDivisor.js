@@ -10,24 +10,72 @@ assert.strictEqual(mygcd( 8,  9),  1)
 assert.strictEqual(mygcd( 1,  1),  1)
 
 function mygcd(x,y){
-    let z = []
-    if(x > y){
-        for (let i = 0; i < y; i++) {
-            if(y%i===0){
-                z.push(i)
-            }
-        }
-    }
-    else{
-        for (let i = 0; i < x; i++) {
-            if(x%i===0){
-                z.push(i)
-            }
-        }
-    }
-
-}
-
-function mygcd(x,y){
     return y == 0 ? x : mygcd(y, x % y)
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function mygcd(x,y){
+//     return y == 0 ? x : mygcd(y, x % y)
+//   }

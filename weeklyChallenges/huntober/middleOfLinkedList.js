@@ -14,12 +14,64 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-var middleNode = function(head) {
-    let [slow, fast] = [head, head]
 
-    while ( fast && fast.next){
-        fast = fast.next.next;
-        slow = fast.next
-    }
-    return slow
+var middleNode = function(head) {
+
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var middleNode = function(head) {
+//     let [slow, fast] = [head, head]
+
+//     while ( fast && fast.next){
+//         fast = fast.next.next;
+//         slow = fast.next
+//     }
+//     return slow
+// };
