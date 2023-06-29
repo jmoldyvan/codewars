@@ -6,7 +6,7 @@
 
 class Queue {
   // implement your Queue constructor here
-  construstor () {
+  constructor () {
       this.list = []
   }
 };

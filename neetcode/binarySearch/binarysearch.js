@@ -11,6 +11,86 @@
  * @return {number}
  */
 
+
+var search = function(nums, target) {
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //the idea is to cut the array in half for each iteration
 // acquiring the least and greatest number and using those in the next
 // iteration  
@@ -92,6 +172,18 @@ var search = function(nums, target) {
             hi = mid - 1
         // if target is greater, than we dont need anthing to the left, less than,
         // the mid and use that as out lowest for the next isteration
+        } else {
+            lo = mid; 
+        }
+    }
+    return nums[lo]==target?lo:-1;
+};
+var search = function(nums, target) {
+    let lo = 0, hi = nums.length-1;
+    while (lo < hi) {
+        let mid = lo + Math.floor((hi-lo+1)/2);
+        if (target < nums[mid]) {
+            hi = mid - 1
         } else {
             lo = mid; 
         }
