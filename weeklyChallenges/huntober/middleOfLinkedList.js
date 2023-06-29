@@ -16,7 +16,10 @@
  */
 
 var middleNode = function(head) {
+    let [slow,fast] = [head,head]
 
+
+    
 };
 
 
