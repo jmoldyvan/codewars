@@ -14,90 +14,11 @@
 
 var search = function(nums, target) {
 
+
 };
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//the idea is to cut the array in half for each iteration
-// acquiring the least and greatest number and using those in the next
-// iteration  
-
-var search = function(nums, target) {
-
-};
 
 
 
